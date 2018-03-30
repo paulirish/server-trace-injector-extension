@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Trace Injector",
+  "description": "This extension demos how custom server traces can be injected into DevTools.",
+  "version": "0.0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "index.html"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "devtools_page": "devtools.html",
+
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "experimental",
+    "identity",
+    "webRequest",
+    "webRequestBlocking",
+    "*://*/*"
+  ],
+
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+}
